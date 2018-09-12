@@ -1,0 +1,14 @@
+.register {
+  max-width: 440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 150px; }
+  .register h1 {
+    text-align: center;
+    font-size: 25px; }
+  .register button {
+    background-color: #8c8c8c;
+    background: #e2e4e6;
+    border: #e2e4e6;
+    font-size: 25px;
+    cursor: default; }

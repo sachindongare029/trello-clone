@@ -1,20 +1,14 @@
 import React from 'react';
+import './Footer.css';
 
 function Footer() {
 	return (
 		<footer id="footer">
 			<div className="row">
-				<div className="col-sm-6">
-					Copyright Sachin Dongare
-				</div>
-				<div className="col-sm-6">
-					{(new Date()).getFullYear()}
-				</div>
+					<h1>Copyright Trello </h1>
+					<h2>{(new Date()).getFullYear()}</h2>
 			</div>
 		</footer>
 	);
-
 }
-
-
 export default Footer;

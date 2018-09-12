@@ -28,7 +28,7 @@ class Login extends React.Component {
 
 				  <FormGroup>
 				    <Col smOffset={2} sm={10}>
-				      <Button type="submit">Log in</Button>
+				      <Button type="submit" bsStyle="success" bsSize="large" block>Log in</Button>
 				    </Col>
 				  </FormGroup>
 				</Form>

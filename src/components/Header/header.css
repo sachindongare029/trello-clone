@@ -1,0 +1,27 @@
+.nav-bar {
+	background: #0079BF;
+}
+
+.navbar-brand>img {
+    width: 130px;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: #e7e7e7;
+    padding-top: 15px;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    height: 40px;
+    width: 101px;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    width: 88px;
+    height: 40px;
+}
