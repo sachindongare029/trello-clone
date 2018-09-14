@@ -5,8 +5,8 @@ function Footer() {
 	return (
 		<footer id="footer">
 			<div className="row">
-					<h1>Copyright Trello </h1>
-					<h2>{(new Date()).getFullYear()}</h2>
+					<p>&copy; {(new Date()).getFullYear()} www.trello.com </p>
+					<p>All rights reserved.</p>
 			</div>
 		</footer>
 	);
