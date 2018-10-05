@@ -19,7 +19,6 @@ class App extends Component {
             </Grid>
           </div>
         </HashRouter>
-
     );
   }
 }
