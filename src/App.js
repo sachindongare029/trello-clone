@@ -1,26 +1,26 @@
-import React, { Component } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-import Header from './components/Header/Header.js';
+import React from 'react';
+import Header from './components/Header.js';
 import Footer from './components/Footer.js';
-import { HashRouter } from 'react-router-dom'
-import Routes from './routes.js'
-import {Grid} from 'react-bootstrap';
+import PropTypes from 'prop-types';
+import { Provider } from 'react-redux';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Routes from './routes';
 
-class App extends Component {
-  render() {
-    return (
-        <HashRouter>
-          <div className="App">
-            <Grid>
-              <Header />
-              <Routes />
-              <Footer />
-            </Grid>
-          </div>
-        </HashRouter>
-    );
-  }
-}
+import './App.css';
 
+const App = ({ store }) => (
+  <Provider store={store}>
+    <Router>
+      <div className="App">
+        <Header />
+        <Routes />
+        <Footer />
+      </div>
+    </Router>
+  </Provider>
+);
+
+App.propTypes = {
+  store: PropTypes.object.isRequired
+};
 export default App;
