@@ -1,5 +1,7 @@
 import React from 'react';
 import axios from 'axios';
+import { TRELLO_API } from '../utils/constants';
+
 import {
   Form,
   FormGroup,
@@ -8,7 +10,7 @@ import {
   FormControl,
   Button
 } from 'react-bootstrap';
-import './login.css';
+import './login.scss';
 
 class Login extends React.Component {
   constructor(props) {
@@ -34,11 +36,15 @@ class Login extends React.Component {
       email: this.state.email,
       password: this.state.pass
     };
-    axios.post(`http://localhost:3001/login`, { user }).then(res => {
+
+    // `username` will be generated from email
+    this.props.history.push(`/u/dashboard`);
+
+    /*axios.post(`${TRELLO_API}/login`, { user }).then(res => {
       if (res.data.success === true) {
-        this.props.history.push(`/${res.data.username}/boards`);
+        this.props.history.push(`/${res.data.username}/dashboard`);
       }
-    });
+    });*/
   };
   render() {
     return (

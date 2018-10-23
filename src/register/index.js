@@ -1,4 +1,6 @@
 import React from 'react';
+import { TRELLO_API } from '../utils/constants';
+
 import {
   Form,
   FormGroup,
@@ -8,7 +10,7 @@ import {
   Button
 } from 'react-bootstrap';
 import axios from 'axios';
-import './register.css';
+import './register.scss';
 
 class Register extends React.Component {
   constructor(props) {
@@ -18,7 +20,6 @@ class Register extends React.Component {
       email: '',
       pass: ''
     };
-    console.log('this.props', this.props);
   }
 
   handleNameChange = event => {
@@ -45,7 +46,7 @@ class Register extends React.Component {
       password: this.state.pass
     };
 
-    axios.post(`http://localhost:3001/registration`, { user }).then(res => {
+    axios.post(`${TRELLO_API}/registration`, { user }).then(res => {
       if (res.data.success === true) {
         this.props.history.push('/login');
       }
