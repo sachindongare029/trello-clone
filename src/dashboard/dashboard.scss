@@ -33,3 +33,18 @@ $l-max: 90;
     }
 	}
 }
+
+.Modal {
+  width: 600px;
+  margin: 30px auto;
+  background-color: #fff;
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #0000009c;
+}
